@@ -50,7 +50,9 @@ var app = {
 
 //gloabl
 var max = 100;
+
 var courbe = document.getElementById("Courbe");
+
 courbe.setAttribute(
   "d",
   "M 1,602 C 114,500,158,500,270,500 S 411,500,541,500,683,500,811,500 S 1080, 602, 1080, 602 H0Z"

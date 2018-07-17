@@ -60,6 +60,7 @@ courbe.setAttribute(
 //slider 1
 var slider1 = document.getElementById("myRange1");
 var output1 = document.getElementById("s1");
+var circle1 = document.getElementById("p1");
 output1.innerHTML = slider1.value;
 var c = 500;
 
@@ -69,6 +70,7 @@ slider1.oninput = function() {
     this.value = oldValue;
   } else {
     output1.innerHTML = this.value;
+    circle1.style.padding = (this.value*0.2 + 10)+"px";
     calcVal();
     courbeSvg();
   }
@@ -76,6 +78,7 @@ slider1.oninput = function() {
 //slider 2
 var slider2 = document.getElementById("myRange2");
 var output2 = document.getElementById("s2");
+var circle2 = document.getElementById("p2");
 output2.innerHTML = slider2.value;
 slider2.oninput = function() {
   var oldValue = Number(output2.innerHTML);
@@ -83,6 +86,7 @@ slider2.oninput = function() {
     this.value = oldValue;
   } else {
     output2.innerHTML = this.value;
+    circle2.style.padding = (this.value*0.2 + 10)+"px";
     calcVal();
     courbeSvg();
   }
@@ -90,14 +94,14 @@ slider2.oninput = function() {
 //slider 3
 var slider3 = document.getElementById("myRange3");
 var output3 = document.getElementById("s3");
+var circle3 = document.getElementById("p3");
 output3.innerHTML = slider3.value;
-slider3.oninput = function() {
-  output3.innerHTML = this.value;
-};
+
 
 function calcVal() {
   slider3.value = max - (Number(slider1.value) + Number(slider2.value));
   output3.innerHTML = slider3.value;
+  circle3.style.padding = (slider3.value*0.2 + 10)+"px";
   courbeSvg();
 }
 

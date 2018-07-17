@@ -59,11 +59,6 @@ body {
     }
 }
 
-
-
-
-
-
 #legende{
   position: absolute;
   display: inline-block;
@@ -73,6 +68,18 @@ body {
   margin-left: 12.5%;
   margin-right: 12.5%;
 }
+
+#values{
+  position: absolute;
+  display: inline-block;
+  top : 20%;
+  z-index: 10;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
+
 
 p{
   display: inline-block;
@@ -84,7 +91,6 @@ p{
 }
 
 .pourcent {
-  display: block;
   border: 2px solid #a1a1a1;
   padding: 10px;
   background-color: orange;
@@ -92,7 +98,7 @@ p{
   width: 20px;
   height: 20px;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .cls-1 {

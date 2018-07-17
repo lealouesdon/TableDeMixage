@@ -95,14 +95,15 @@ p{
 }
 
 .pourcent {
-  border: 2px solid #a1a1a1;
+  /*border: 2px solid #a1a1a1;*/
   padding: 10px;
-  background-color: orange;
+  /*background-color: orange;*/
   border-radius: 50%;
   width: 20px;
   height: 20px;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 .cls-1 {
@@ -111,6 +112,16 @@ p{
 
 .cls-3 {
   fill: url(#Nouvelle_nuance_de_dégradé_1);
+}
+
+#p1{
+  background: linear-gradient(#fcee21,#f7931e);
+}
+#p2{
+  background: linear-gradient(#fbb03b,#f15a24);
+}
+#p3{
+  background: linear-gradient(#f7931e,#ed1c24);
 }
 
 

@@ -67,13 +67,16 @@ var c = 500;
 slider1.oninput = function() {
   var oldValue = Number(output1.innerHTML);
   if (Number(slider2.value) + Number(this.value) > max) {
-    this.value = oldValue;
-  } else {
+    var value = slider2.value;
+    slider2.value = value - (this.value - oldValue);
+    output2.innerHTML = slider2.value;
+    circle2.style.padding = (slider2.value*0.2 + 10)+"px";
+  }
     output1.innerHTML = this.value;
     circle1.style.padding = (this.value*0.2 + 10)+"px";
     calcVal();
     courbeSvg();
-  }
+
 };
 //slider 2
 var slider2 = document.getElementById("myRange2");
@@ -83,13 +86,16 @@ output2.innerHTML = slider2.value;
 slider2.oninput = function() {
   var oldValue = Number(output2.innerHTML);
   if (Number(slider1.value) + Number(this.value) > max) {
-    this.value = oldValue;
-  } else {
+    var value = slider1.value;
+    slider1.value = value - (this.value - oldValue);
+    output1.innerHTML = slider1.value;
+    circle1.style.padding = (slider1.value*0.2 + 10)+"px";
+  }
     output2.innerHTML = this.value;
     circle2.style.padding = (this.value*0.2 + 10)+"px";
     calcVal();
     courbeSvg();
-  }
+
 };
 //slider 3
 var slider3 = document.getElementById("myRange3");

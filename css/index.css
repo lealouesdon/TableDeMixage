@@ -44,19 +44,7 @@ body {
 
 }
 
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
+
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -70,7 +58,7 @@ body {
 
 .slidecontainer {
   float: left;
-  width: 33.33%;
+  width: 25%;
   height: 700px;
   text-align: center;
 }
@@ -110,6 +98,8 @@ body {
 }
 #container {
   z-index: 10;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
 }
 #svg{
   top :300;
@@ -122,4 +112,22 @@ input[type=range][orient=vertical]
     width: 8px;
     height: 80%;
     padding: 0 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: url('../img/logo.png');
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: url('../img/logo.png');
+    cursor: pointer;
 }

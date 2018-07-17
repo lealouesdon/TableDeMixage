@@ -67,7 +67,7 @@ body {
 #legende{
   position: absolute;
   display: inline-block;
-  top : 400px;
+  top : 20%;
   z-index: 10;
   width: 100%;
   margin-left: 12.5%;
@@ -83,10 +83,16 @@ p{
   padding-bottom: 10px;
 }
 
-h3 {
+.pourcent {
+  display: block;
   border: 2px solid #a1a1a1;
   padding: 10px;
-  background:url(../img/rond.gif) no-repeat center top;
+  background-color: orange;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+    margin-right: auto;
 }
 
 .cls-1 {

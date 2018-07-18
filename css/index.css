@@ -83,7 +83,6 @@ p{
   display: inline-block;
   width: 32%;
   text-align : center;
-  background-color: white;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -152,7 +151,6 @@ p{
   height: 40%;
   z-index : 10;
   padding-top:60%;
-
 }
 
 input[type=range][orient=vertical]

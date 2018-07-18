@@ -37,18 +37,17 @@ under the License.
   * Create your own at http://cspisawesome.com
 -->
 <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <title>Table de Mixage</title>
 </head>
 
 <body>
-<div class="title" id="t1">
-  <h1>CURIOSITY</h1>
-</div>
-<div class="title" id="t2">
-  <h1>Table de mixage</h1>
-</div>
+  <div class="title" id="t1">
+    <h1>CURIOSITY</h1>
+  </div>
+  <div class="title" id="t2">
+    <h1>Table de mixage</h1>
+  </div>
   <div id="values">
     <div class="pour" id="pour1">
       <p class="pourcent" id="p1"><span id="s1"></span><span>%</span></p>
@@ -62,12 +61,23 @@ under the License.
   </div>
 
   <div id="legende">
-    <p>Deja vu</p>
-    <p>Decidable</p>
-    <p>Indecidable</p>
+    <p>Déjà vu</p>
+    <p>Décidable</p>
+    <p>Indécidable</p>
   </div>
 
   <div id="bottom">
+    <div id="imageDroite">
+      <img src="css/Fleche.png" class="thumb" id="imgd" alt="" />
+    </div>
+    <div id=imageGauche>
+      <img src="css/Fleche.png" class="thumb" id="imgg" alt="" />
+    </div>
+    <div id=imageDroiteDroite>
+      <img src="css/FlecheRouge.png" class="thumb" id="imgdd" alt="" />
+    </div>
+
+
     <div id="svg">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 150" preserveAspectRatio="none" height="40vh" width="100vw">
         <defs>
@@ -77,7 +87,7 @@ under the License.
           </linearGradient>
 
         </defs>
-        </filter>
+      </filter>
 
       <title>Courbe</title>
       <path id="Courbe" class="cls-3" />

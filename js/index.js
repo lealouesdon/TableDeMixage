@@ -55,6 +55,25 @@ var max = 100;
 
 var courbe = document.getElementById("Courbe");
 
+var slider1 = document.getElementById("myRange1");
+slider1.value+=60;
+var output1 = document.getElementById("s1");
+var circle1 = document.getElementById("p1");
+var img1 = document.getElementById("imageGauche");
+var fleche1 = document.getElementById("imgg");
+
+var slider3 = document.getElementById("myRange3");
+slider3.value+=40;
+var output3 = document.getElementById("s3");
+var circle3 = document.getElementById("p3");
+var img3 = document.getElementById("imageDroiteDroite");
+var fleche3 = document.getElementById("imgdd");
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("s2");
+var circle2 = document.getElementById("p2");
+var img2 = document.getElementById("imageDroite");
+var fleche2 = document.getElementById("imgd");
 
 // courbe.setAttribute(
 //   "d",
@@ -65,10 +84,8 @@ var courbe = document.getElementById("Courbe");
 //document.getElementById("body").style["width"] = screen.width;
 //document.getElementById("body").style["height"] = screen.height;
 //slider 1
-var slider1 = document.getElementById("myRange1");
-slider1.value+=60;
-var output1 = document.getElementById("s1");
-var circle1 = document.getElementById("p1");
+
+circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
 output1.innerHTML = slider1.value;
 var c = 500;
 
@@ -79,17 +96,31 @@ slider1.oninput = function() {
     slider2.value = value - (this.value - oldValue);
     output2.innerHTML = slider2.value;
     circle2.style.padding = (slider2.value*0.06 + 5)+"vw";
+    img2.style.bottom = (slider2.value*0.27 + 3.33)+"vh";
+  }
+  if (Number(this.value)== 0){
+    fleche1.src="css/FlecheUp.png";
+    if(Number(slider2.value)==100){
+      fleche2.src="css/FlecheDown.png";
+    }
+  } else if (Number(this.value)==100) {
+    fleche1.src="css/FlecheDown.png";
+    fleche2.src="css/FlecheUp.png";
+  } else {
+    fleche1.src="css/Fleche.png";
+    if(Number(slider2.value)!=0){
+      fleche2.src="css/Fleche.png";
+    }
   }
     output1.innerHTML = this.value;
     circle1.style.padding = (this.value*0.06 + 5)+"vw";
+    img1.style.bottom = (this.value*0.27 + 3.33)+"vh";
     calcVal();
     courbeSvg();
 
 };
 //slider 2
-var slider2 = document.getElementById("myRange2");
-var output2 = document.getElementById("s2");
-var circle2 = document.getElementById("p2");
+
 output2.innerHTML = slider2.value;
 slider2.oninput = function() {
   var oldValue = Number(output2.innerHTML);
@@ -98,18 +129,35 @@ slider2.oninput = function() {
     slider1.value = value - (this.value - oldValue);
     output1.innerHTML = slider1.value;
     circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
+    img1.style.bottom = (slider1.value*0.27 + 3.33)+"vh";
+  }
+  if (Number(this.value)== 0){
+    fleche2.src="css/FlecheUp.png";
+    if(Number(slider1.value)==100){
+      fleche1.src="css/FlecheDown.png";
+    }
+  } else if (Number(this.value)==100) {
+    fleche2.src="css/FlecheDown.png";
+    fleche1.src="css/FlecheUp.png";
+  } else {
+    fleche2.src="css/Fleche.png";
+    if(Number(slider1.value)!=0){
+      fleche1.src="css/Fleche.png";
+    }
   }
     output2.innerHTML = this.value;
     circle2.style.padding = (this.value*0.06 + 5)+"vw";
+    img2.style.bottom = (this.value*0.27 + 3.33)+"vh";
     calcVal();
     courbeSvg();
 
 };
+
+
 //slider 3
-var slider3 = document.getElementById("myRange3");
-slider3.value+=40;
-var output3 = document.getElementById("s3");
-var circle3 = document.getElementById("p3");
+
+
+circle3.style.padding = (slider3.value*0.06 + 5)+"vw";
 output3.innerHTML = slider3.value;
 
 
@@ -117,7 +165,15 @@ function calcVal() {
   slider3.value = max - (Number(slider1.value) + Number(slider2.value));
   output3.innerHTML = slider3.value;
   circle3.style.padding = (slider3.value*0.06 + 5)+"vw";
+  img3.style.bottom = (slider3.value*0.27 + 3.33)+"vh";
   courbeSvg();
+  if(Number(slider3.value)==0){
+    fleche3.src="css/FlecheRougeUp.png";
+  } else if (Number(slider3.value)==100) {
+    fleche3.src="css/FlecheRougeDown.png"
+  } else {
+    fleche3.src="css/FlecheRouge.png";
+  }
 }
 
 //courbeSvg();

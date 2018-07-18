@@ -104,6 +104,24 @@ p{
   margin-left: auto;
   margin-right: auto;
   color: white;
+  font-size: 15px;
+  text-align:right;
+}
+
+.title{
+  z-index: 30;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  opacity: 0.2;
+  font-size: 25px;
+}
+
+#t2{
+  top : 90%;
+  font-size: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .cls-1 {

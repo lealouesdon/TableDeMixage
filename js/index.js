@@ -17,6 +17,7 @@
  * under the License.
  */
 
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -54,16 +55,18 @@ var max = 100;
 
 var courbe = document.getElementById("Courbe");
 
-courbe.setAttribute(
-  "d",
-  "M 1,602 C 114,500,158,500,270,500 S 411,500,541,500,683,500,811,500 S 1080, 602, 1080, 602 H0Z"
-);
+
+// courbe.setAttribute(
+//   "d",
+//   "M 1,602 C 114,500,158,500,270,500 S 411,500,541,500,683,500,811,500 S 1080, 602, 1080, 602 H0Z"
+// );
 
 
 //document.getElementById("body").style["width"] = screen.width;
 //document.getElementById("body").style["height"] = screen.height;
 //slider 1
 var slider1 = document.getElementById("myRange1");
+slider1.value+=60;
 var output1 = document.getElementById("s1");
 var circle1 = document.getElementById("p1");
 output1.innerHTML = slider1.value;
@@ -104,6 +107,7 @@ slider2.oninput = function() {
 };
 //slider 3
 var slider3 = document.getElementById("myRange3");
+slider3.value+=40;
 var output3 = document.getElementById("s3");
 var circle3 = document.getElementById("p3");
 output3.innerHTML = slider3.value;
@@ -116,20 +120,35 @@ function calcVal() {
   courbeSvg();
 }
 
+courbeSvg();
+
 function courbeSvg() {
-  var modif =
-    "M 1,602 C 114, 500, 158, " +
-    (Number(slider1.value) - 100) * -5 +
-    ", 270, " +
-    (Number(slider1.value) - 100) * -5 +
-    " S 411, " +
-    (Number(slider2.value) - 100) * -5 +
-    ", 541, " +
-    (Number(slider2.value) - 100) * -5 +
-    ", 683," +
-    (Number(slider3.value) - 100) * -5 +
-    ", 811, " +
-    (Number(slider3.value) - 100) * -5 +
-    " S 1080, 602, 1080, 602 H0Z";
+  var modif = "M0 150 V 100 C 10 100, 10 " +
+    (100-Number(slider1.value)) +
+    ", 20 " +
+    (100-Number(slider1.value)) +
+    " S 30 " +
+    (100-Number(slider2.value)) +
+    ", 40 " +
+    (100-Number(slider2.value)) +
+    " S 50 " +
+    (100-Number(slider3.value)) +
+    ", 60 " +
+    (100-Number(slider3.value)) +
+    " S 70 100, 80 100 V 80 150 Z";
+    // "M 1,602 C 114, 500, 158, " +
+    // (Number(slider1.value) - 100) * -5 +
+    // ", 270, " +
+    // (Number(slider1.value) - 100) * -5 +
+    // " S 411, " +
+    // (Number(slider2.value) - 100) * -5 +
+    // ", 541, " +
+    // (Number(slider2.value) - 100) * -5 +
+    // ", 683," +
+    // (Number(slider3.value) - 100) * -5 +
+    // ", 811, " +
+    // (Number(slider3.value) - 100) * -5 +
+    // " S 1080, 602, 1080, 602 H0Z";
+
   courbe.setAttribute("d", modif);
 }

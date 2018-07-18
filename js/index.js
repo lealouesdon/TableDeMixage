@@ -61,6 +61,7 @@ var output1 = document.getElementById("s1");
 var circle1 = document.getElementById("p1");
 var img1 = document.getElementById("imageGauche");
 var fleche1 = document.getElementById("imgg");
+fleche1.src="css/fleche.png";
 
 var slider3 = document.getElementById("myRange3");
 slider3.value+=40;
@@ -74,7 +75,7 @@ var output2 = document.getElementById("s2");
 var circle2 = document.getElementById("p2");
 var img2 = document.getElementById("imageDroite");
 var fleche2 = document.getElementById("imgd");
-
+fleche2.src="css/FlecheUp.png";
 // courbe.setAttribute(
 //   "d",
 //   "M 1,602 C 114,500,158,500,270,500 S 411,500,541,500,683,500,811,500 S 1080, 602, 1080, 602 H0Z"
@@ -103,13 +104,13 @@ slider1.oninput = function() {
     if(Number(slider2.value)==100){
       fleche2.src="css/FlecheDown.png";
     }
-  } else if (Number(this.value)==100) {
+  } else if (Number(this.value)==100){
     fleche1.src="css/FlecheDown.png";
     fleche2.src="css/FlecheUp.png";
   } else {
-    fleche1.src="css/Fleche.png";
+    fleche1.src="css/fleche.png";
     if(Number(slider2.value)!=0){
-      fleche2.src="css/Fleche.png";
+      fleche2.src="css/fleche.png";
     }
   }
     output1.innerHTML = this.value;
@@ -140,9 +141,9 @@ slider2.oninput = function() {
     fleche2.src="css/FlecheDown.png";
     fleche1.src="css/FlecheUp.png";
   } else {
-    fleche2.src="css/Fleche.png";
+    fleche2.src="css/fleche.png";
     if(Number(slider1.value)!=0){
-      fleche1.src="css/Fleche.png";
+      fleche1.src="css/fleche.png";
     }
   }
     output2.innerHTML = this.value;

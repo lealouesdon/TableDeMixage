@@ -75,10 +75,10 @@ slider1.oninput = function() {
     var value = slider2.value;
     slider2.value = value - (this.value - oldValue);
     output2.innerHTML = slider2.value;
-    circle2.style.padding = (slider2.value*0.2 + 10)+"px";
+    circle2.style.padding = (slider2.value*0.2 + 20)+"px";
   }
     output1.innerHTML = this.value;
-    circle1.style.padding = (this.value*0.2 + 10)+"px";
+    circle1.style.padding = (this.value*0.2 + 20)+"px";
     calcVal();
     courbeSvg();
 
@@ -94,10 +94,10 @@ slider2.oninput = function() {
     var value = slider1.value;
     slider1.value = value - (this.value - oldValue);
     output1.innerHTML = slider1.value;
-    circle1.style.padding = (slider1.value*0.2 + 10)+"px";
+    circle1.style.padding = (slider1.value*0.2 + 20)+"px";
   }
     output2.innerHTML = this.value;
-    circle2.style.padding = (this.value*0.2 + 10)+"px";
+    circle2.style.padding = (this.value*0.2 + 20)+"px";
     calcVal();
     courbeSvg();
 
@@ -112,7 +112,7 @@ output3.innerHTML = slider3.value;
 function calcVal() {
   slider3.value = max - (Number(slider1.value) + Number(slider2.value));
   output3.innerHTML = slider3.value;
-  circle3.style.padding = (slider3.value*0.2 + 10)+"px";
+  circle3.style.padding = (slider3.value*0.2 + 20)+"px";
   courbeSvg();
 }
 

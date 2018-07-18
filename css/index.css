@@ -219,7 +219,7 @@ input[type=range]
     /*-webkit-appearance: slider-vertical; /*  WebKit */
     -webkit-appearance: none;
     transform: translateX(-55%)  rotate(270deg) translateX(-45%);
-    width: 60vw;
+    width: 26.6vh;
     height: 3px;
     padding: 0 5px;
     outline: none;

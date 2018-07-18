@@ -120,7 +120,21 @@ function calcVal() {
   courbeSvg();
 }
 
-courbeSvg();
+//courbeSvg();
+var modif = "M0 150 V 100 C 10 100, 10 " +
+  (100-Number(slider1.value)) +
+  ", 20 " +
+  (100-Number(slider1.value)) +
+  " S 30 " +
+  (100-Number(slider2.value)) +
+  ", 40 " +
+  (100-Number(slider2.value)) +
+  " S 50 " +
+  (100-Number(slider3.value)) +
+  ", 60 " +
+  (100-Number(slider3.value)) +
+  " S 70 100, 80 100 V 80 150 Z";
+courbe.setAttribute("d", modif);
 
 function courbeSvg() {
   var modif = "M0 150 V 100 C 10 100, 10 " +

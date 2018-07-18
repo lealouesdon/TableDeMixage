@@ -96,7 +96,7 @@ p{
 }
 
 #pour1{
-  animation: pour1 5s infinite;
+  animation: pour1 4s infinite;
 }
 
 #pour2{
@@ -106,22 +106,26 @@ p{
 
 #pour3{
   right: 0%;
-  animation: pour3 5s infinite;
+  animation: pour3 4s infinite;
 }
 
 @keyframes pour1 {
     0%   {top:0%;}
     50%  {top:30%;}
+    90% {top:0%;}
     100% {top:0%;}
 }
 @keyframes pour2 {
     0%   {top:35%;}
-    35%  {top:65%;}
+    10%   {top:35%;}
+    60%  {top:65%;}
+    95% {top:35%;}
     100% {top:35%;}
 }
 @keyframes pour3 {
     0%   {top:70%;}
-    55%  {top:100%;}
+    20%   {top:70%;}
+    70%  {top:100%;}
     100% {top:70%;}
 }
 

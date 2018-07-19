@@ -131,9 +131,9 @@ p{
     100% {top:0%;}
 }
 @keyframes pour2 {
-    0%   {top:30%;}
-    50%  {top:70%;}
-    100% {top:30%;}
+    0%   {top:35%;}
+    50%  {top:65%;}
+    100% {top:35%;}
 }
 @keyframes pour3 {
     0%   {top:70%;}

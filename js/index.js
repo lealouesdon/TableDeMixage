@@ -161,9 +161,8 @@ slider2.oninput = function() {
     img2.style.bottom = (this.value*0.27 + 3.33)+"vh";
     calcVal();
     courbeSvg();
-  //  anim();
-  colors();
-
+    //anim();
+    colors();
 };
 
 

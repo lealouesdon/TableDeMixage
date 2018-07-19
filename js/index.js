@@ -184,6 +184,7 @@ function calcVal() {
   } else {
     fleche3.src="css/FlecheRouge.png";
   }
+  easterEgg();
 }
 
 //courbeSvg();
@@ -264,4 +265,11 @@ function colors(){
   circle2.style.background = "linear-gradient(rgb(252,"+(225-Number(slider2.value)*0.75)+",31),rgb(252,"+(150-Number(slider2.value)*1.25)+",31))";
   circle3.style.background = "linear-gradient(rgb(252,"+(225-Number(slider3.value)*0.75)+",31),rgb(252,"+(150-Number(slider3.value)*1.25)+",31))";
 
+}
+function easterEgg(){
+  if(Number(slider1.value)==33 && Number(slider2.value)==33){
+    document.getElementById("nini").innerHTML = "Table de ninixage";
+  } else {
+    document.getElementById("nini").innerHTML = "Table de mixage";
+  }
 }

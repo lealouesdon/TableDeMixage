@@ -56,7 +56,7 @@ var max = 100;
 var courbe = document.getElementById("Courbe");
 
 var slider1 = document.getElementById("myRange1");
-slider1.value+=60;
+slider1.value+=55;
 var output1 = document.getElementById("s1");
 var circle1 = document.getElementById("p1");
 var img1 = document.getElementById("imageGauche");
@@ -64,7 +64,7 @@ var fleche1 = document.getElementById("imgg");
 fleche1.src="css/fleche.png";
 
 var slider3 = document.getElementById("myRange3");
-slider3.value+=40;
+slider3.value+=45;
 var output3 = document.getElementById("s3");
 var circle3 = document.getElementById("p3");
 var img3 = document.getElementById("imageDroiteDroite");
@@ -122,7 +122,7 @@ slider1.oninput = function() {
     img1.style.bottom = (this.value*0.27 + 3.33)+"vh";
     calcVal();
     courbeSvg();
-    anim();
+  //  anim();
 
 };
 //slider 2
@@ -156,7 +156,7 @@ slider2.oninput = function() {
     img2.style.bottom = (this.value*0.27 + 3.33)+"vh";
     calcVal();
     courbeSvg();
-    anim();
+  //  anim();
 
 };
 

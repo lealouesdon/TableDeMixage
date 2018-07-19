@@ -76,6 +76,10 @@ var circle2 = document.getElementById("p2");
 var img2 = document.getElementById("imageDroite");
 var fleche2 = document.getElementById("imgd");
 fleche2.src="css/FlecheUp.png";
+
+var anim1 = document.getElementById("pour1");
+var anim2 = document.getElementById("pour2");
+var anim3 = document.getElementById("pour3");
 // courbe.setAttribute(
 //   "d",
 //   "M 1,602 C 114,500,158,500,270,500 S 411,500,541,500,683,500,811,500 S 1080, 602, 1080, 602 H0Z"
@@ -118,6 +122,7 @@ slider1.oninput = function() {
     img1.style.bottom = (this.value*0.27 + 3.33)+"vh";
     calcVal();
     courbeSvg();
+    anim();
 
 };
 //slider 2
@@ -151,6 +156,7 @@ slider2.oninput = function() {
     img2.style.bottom = (this.value*0.27 + 3.33)+"vh";
     calcVal();
     courbeSvg();
+    anim();
 
 };
 
@@ -222,4 +228,30 @@ function courbeSvg() {
     // " S 1080, 602, 1080, 602 H0Z";
 
   courbe.setAttribute("d", modif);
+}
+
+function anim(){
+  if(Number(slider1.value)<=33){
+    anim1.style.WebkitAnimation = "pour3 4s ease-in-out -1s infinite";
+  }else if(Number(slider1.value)<=66){
+        anim1.style.WebkitAnimation = "pour2 4s ease-in-out -0.5s infinite";
+  }else{
+        anim1.style.WebkitAnimation = "pour1 4s ease-in-out 0s infinite";
+  }
+
+  if(Number(slider2.value)<=33){
+    anim2.style.WebkitAnimation = "pour3 4s ease-in-out -1s infinite";
+  }else if(Number(slider2.value)<=66){
+        anim2.style.WebkitAnimation = "pour2 4s ease-in-out -0.5s infinite";
+  }else{
+        anim2.style.WebkitAnimation = "pour1 4s ease-in-out 0s infinite";
+  }
+
+  if(Number(slider3.value)<=33){
+    anim3.style.WebkitAnimation = "pour3 4s ease-in-out -1s infinite";
+  }else if(Number(slider3.value)<=66){
+        anim3.style.WebkitAnimation = "pour2 4s ease-in-out -0.5s infinite";
+  }else{
+        anim3.style.WebkitAnimation = "pour1 4s ease-in-out 0s infinite";
+  }
 }

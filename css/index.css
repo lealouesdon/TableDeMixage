@@ -283,7 +283,8 @@ input[type=range]
   width: 6vw;
   height: 20vh;
   left: 72vw;
-  bottom: 14vh;
+
+  bottom:19.53vh;
 }
 
 #imageGauche{
@@ -293,7 +294,7 @@ input[type=range]
   width: 6vw;
   height:20vh;
   left:22vw;
-  bottom:19.53vh;
+  bottom: 14vh;
 }
 
 #myRange2{
@@ -307,4 +308,44 @@ input[type=range]
 .canvas{
   height: 70%;
   width: 20%;
+}
+
+.overlay{
+    opacity:1;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+
+.btn{
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+  background: linear-gradient(#fcee21,#f7931e);
+  margin-left: 5vw;
+  padding-top:  10vw;
+  padding-bottom: 10vw;
+  padding-left: 3vw;
+  padding-right: 18vw;
+  width: 20px;
+    height: 20px;
+
+    margin-right: auto;
+    color: white;
+    font-size: 15px;
+}
+.box{
+  position: absolute;
+  width: 100%;
+  top : 40vh;
+}
+
+.textBtn{
+  height: 10vh;
+  overflow: hidden;
+    white-space: nowrap;
 }

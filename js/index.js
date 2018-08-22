@@ -106,7 +106,7 @@ slider1.oninput = function() {
     img2.style.bottom = (slider2.value*0.27 + 3.33)+"vh";*/
 
   }
-  if (Number(this.value)== 0){
+  /*if (Number(this.value)== 0){
     fleche1.src="css/FlecheUp.png";
     if(Number(slider2.value)==100){
       fleche2.src="css/FlecheDown.png";
@@ -119,10 +119,10 @@ slider1.oninput = function() {
     if(Number(slider2.value)!=0){
       fleche2.src="css/fleche.png";
     }
-  }
-    output1.innerHTML = this.value;
+  }*/
+    /*output1.innerHTML = this.value;
     circle1.style.padding = (this.value*0.06 + 5)+"vw";
-    img1.style.bottom = (this.value*0.27 + 3.33)+"vh";
+    img1.style.bottom = (this.value*0.27 + 3.33)+"vh";*/
     calcVal();
     courbeSvg();
   //  anim();
@@ -144,14 +144,14 @@ output2.innerHTML = slider2.value;
 slider2.oninput = function() {
   var oldValue = Number(output2.innerHTML);
   if (Number(slider1.value) + Number(this.value) > max) {
-    /*var value = slider1.value;
-    slider1.value = value - (this.value - oldValue);
+    var value = slider2.value;
+    /*slider1.value = value - (this.value - oldValue);
     output1.innerHTML = slider1.value;
     circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
     img1.style.bottom = (slider1.value*0.27 + 3.33)+"vh";*/
     slider2.value = value - (this.value - oldValue);
   }
-  if (Number(this.value)== 0){
+  /*if (Number(this.value)== 0){
     fleche2.src="css/FlecheUp.png";
     if(Number(slider1.value)==100){
       fleche1.src="css/FlecheDown.png";
@@ -164,10 +164,10 @@ slider2.oninput = function() {
     if(Number(slider1.value)!=0){
       fleche1.src="css/fleche.png";
     }
-  }
-    output2.innerHTML = this.value;
+  }*/
+    /*output2.innerHTML = this.value;
     circle2.style.padding = (this.value*0.06 + 5)+"vw";
-    img2.style.bottom = (this.value*0.27 + 3.33)+"vh";
+    img2.style.bottom = (this.value*0.27 + 3.33)+"vh";*/
     calcVal();
     courbeSvg();
     //anim();
@@ -216,6 +216,8 @@ function calcVal() {
     fleche1.src="css/fleche.png";
     if(Number(slider2.value)!=0){
       fleche2.src="css/fleche.png";
+    }else{
+      fleche2.src="css/FlecheUp.png";
     }
   }
 
@@ -335,6 +337,9 @@ function setMode(m){
   calcVal();
   courbeSvg();
   //anim();
+  colors();
+  slider1.disabled = false;
+  slider2.disabled = true;
   colors();
   box.style.visibility = 'hidden';      // Hide
   //box.parentNode.removeChild(box);

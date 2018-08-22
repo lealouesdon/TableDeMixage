@@ -56,7 +56,7 @@ var mode;
 var courbe = document.getElementById("Courbe");
 
 var slider1 = document.getElementById("myRange1");
-slider1.value+=40;
+//slider1.value+=40;
 var output1 = document.getElementById("s1");
 var circle1 = document.getElementById("p1");
 var img1 = document.getElementById("imageGauche");
@@ -64,7 +64,7 @@ var fleche1 = document.getElementById("imgg");
 
 
 var slider3 = document.getElementById("myRange3");
-slider3.value+=60;
+//slider3.value+=60;
 var output3 = document.getElementById("s3");
 var circle3 = document.getElementById("p3");
 var img3 = document.getElementById("imageDroiteDroite");
@@ -187,6 +187,14 @@ function calcVal() {
   output3.innerHTML = slider3.value;
   circle3.style.padding = (slider3.value*0.06 + 5)+"vw";
   img3.style.bottom = (slider3.value*0.27 + 3.33)+"vh";
+  //
+  output1.innerHTML = slider1.value;
+  circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
+  img1.style.bottom = (slider1.value*0.27 + 3.33)+"vh";
+  //
+  output2.innerHTML = slider2.value;
+  circle2.style.padding = (slider2.value*0.06 + 5)+"vw";
+  img2.style.bottom = (slider2.value*0.27 + 3.33)+"vh";
   courbeSvg();
   if(Number(slider3.value)==0){
     fleche3.src="css/FlecheRougeUp.png";
@@ -195,6 +203,22 @@ function calcVal() {
   } else {
     fleche3.src="css/FlecheRouge.png";
   }
+
+  if (Number(slider1.value)== 0){
+    fleche1.src="css/FlecheUp.png";
+    if(Number(slider2.value)==100){
+      fleche2.src="css/FlecheDown.png";
+    }
+  } else if (Number(slider1.value)==100){
+    fleche1.src="css/FlecheDown.png";
+    fleche2.src="css/FlecheUp.png";
+  } else {
+    fleche1.src="css/fleche.png";
+    if(Number(slider2.value)!=0){
+      fleche2.src="css/fleche.png";
+    }
+  }
+
   easterEgg();
 }
 
@@ -299,7 +323,25 @@ function setMode(m){
     slider1.max = 40;
     slider2.max = 60;
     slider3.max = 60;
+  }else{
+    slider1.max = 100;
+    slider2.max = 100;
+    slider3.max = 100;
   }
   var box = document.getElementById("Bbox");
-  box.parentNode.removeChild(box);
+  slider1.value = 0;
+  slider2.value = 0;
+  slider3.value = 100;
+  calcVal();
+  courbeSvg();
+  //anim();
+  colors();
+  box.style.visibility = 'hidden';      // Hide
+  //box.parentNode.removeChild(box);
 }
+
+document.addEventListener("backbutton", function() {
+
+  var box = document.getElementById("Bbox");
+box.style.visibility = 'visible';     // Show
+}, false);

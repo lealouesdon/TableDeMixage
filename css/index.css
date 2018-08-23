@@ -329,8 +329,8 @@ input[type=range]
   margin-left: 5vw;
   padding-top:  10vw;
   padding-bottom: 10vw;
-  padding-left: 3vw;
-  padding-right: 18vw;
+  padding-left: 1.5vw;
+  padding-right: 18.5vw;
   width: 20px;
     height: 20px;
 
@@ -338,6 +338,17 @@ input[type=range]
     color: white;
     font-size: 15px;
 }
+
+#btn1{
+  padding-left: 4vw;
+  padding-right: 16vw;
+}
+
+#btn2{
+  padding-left: 3vw;
+  padding-right: 17vw;
+}
+
 .box{
   position: absolute;
   width: 100%;
@@ -345,7 +356,9 @@ input[type=range]
 }
 
 .textBtn{
-  height: 10vh;
+
   overflow: hidden;
     white-space: nowrap;
+    text-align: center;
+
 }

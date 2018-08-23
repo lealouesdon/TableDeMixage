@@ -92,7 +92,11 @@ circle3.style.background = "linear-gradient(rgb(252,"+(225-Number(slider3.value)
 //document.getElementById("body").style["height"] = screen.height;
 //slider 1
 
-circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
+circle1.style.paddingTop = (slider1.value*0.06 + 5)+"vw";
+circle1.style.paddingBottom = (slider1.value*0.06 + 5)+"vw";
+circle1.style.paddingRight = (slider1.value*0.06 + 6)+"vw";
+circle1.style.paddingLeft = (slider1.value*0.06 + 4)+"vw";
+
 output1.innerHTML = slider1.value;
 var c = 500;
 
@@ -178,22 +182,38 @@ slider2.oninput = function() {
 //slider 3
 
 
-circle3.style.padding = (slider3.value*0.06 + 5)+"vw";
+//circle3.style.padding = (slider3.value*0.06 + 5)+"vw";
+circle3.style.paddingTop = (slider3.value*0.06 + 5)+"vw";
+circle3.style.paddingBottom = (slider3.value*0.06 + 5)+"vw";
+circle3.style.paddingRight = (slider3.value*0.06 + 6)+"vw";
+circle3.style.paddingLeft = (slider3.value*0.06 + 4)+"vw";
 output3.innerHTML = slider3.value;
 
 
 function calcVal() {
   slider3.value = max - (Number(slider1.value) + Number(slider2.value));
   output3.innerHTML = slider3.value;
-  circle3.style.padding = (slider3.value*0.06 + 5)+"vw";
+  //circle3.style.padding = (slider3.value*0.06 + 5)+"vw";
+  circle3.style.paddingTop = (slider3.value*0.06 + 5)+"vw";
+  circle3.style.paddingBottom = (slider3.value*0.06 + 5)+"vw";
+  circle3.style.paddingRight = (slider3.value*0.06 + 6)+"vw";
+  circle3.style.paddingLeft = (slider3.value*0.06 + 4)+"vw";
   img3.style.bottom = (slider3.value*0.27 + 3.33)+"vh";
   //
   output1.innerHTML = slider1.value;
-  circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
+  //circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
+  circle1.style.paddingTop = (slider1.value*0.06 + 5)+"vw";
+  circle1.style.paddingBottom = (slider1.value*0.06 + 5)+"vw";
+  circle1.style.paddingRight = (slider1.value*0.06 + 6)+"vw";
+  circle1.style.paddingLeft = (slider1.value*0.06 + 4)+"vw";
   img1.style.bottom = (slider1.value*0.27 + 3.33)+"vh";
   //
   output2.innerHTML = slider2.value;
-  circle2.style.padding = (slider2.value*0.06 + 5)+"vw";
+  //circle2.style.padding = (slider2.value*0.06 + 5)+"vw";
+  circle2.style.paddingTop = (slider2.value*0.06 + 5)+"vw";
+  circle2.style.paddingBottom = (slider2.value*0.06 + 5)+"vw";
+  circle2.style.paddingRight = (slider2.value*0.06 + 6)+"vw";
+  circle2.style.paddingLeft = (slider2.value*0.06 + 4)+"vw";
   img2.style.bottom = (slider2.value*0.27 + 3.33)+"vh";
   courbeSvg();
   if(Number(slider3.value)==0){
@@ -333,7 +353,7 @@ function setMode(m){
   var box = document.getElementById("Bbox");
   slider1.value = 0;
   slider2.value = 0;
-  slider3.value = 100;
+  slider3.value = 0;
   calcVal();
   courbeSvg();
   //anim();

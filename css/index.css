@@ -42,7 +42,7 @@ body {
     height:100vh;
     width:100vw;
     margin:0;
-    position: relative;
+    position: fixed;
     overflow:hidden;
 
 }
@@ -312,10 +312,10 @@ input[type=range]
 
 .overlay{
     opacity:1;
-    background-color:#ccc;
+    background-color:#F9F9F9;
     position:fixed;
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     top:0px;
     left:0px;
     z-index:1000;

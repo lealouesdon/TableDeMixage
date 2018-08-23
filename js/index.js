@@ -341,7 +341,7 @@ function easterEgg(){
 
 function setMode(m){
   mode = m;
-  if(m==2){
+  if(m==2||m==3){
     slider1.max = 40;
     slider2.max = 60;
     slider3.max = 60;

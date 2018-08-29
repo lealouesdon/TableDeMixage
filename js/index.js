@@ -103,30 +103,10 @@ var c = 500;
 slider1.oninput = function() {
   var oldValue = Number(output1.innerHTML);
   if (Number(slider2.value) + Number(this.value) > max) {
-    /*var value = slider2.value;
-    slider2.value = value - (this.value - oldValue);
-    output2.innerHTML = slider2.value;
-    circle2.style.padding = (slider2.value*0.06 + 5)+"vw";
-    img2.style.bottom = (slider2.value*0.27 + 3.33)+"vh";*/
+    var value = slider1.value;
+    slider1.value = value - (this.value - oldValue);
 
   }
-  /*if (Number(this.value)== 0){
-    fleche1.src="css/FlecheUp.png";
-    if(Number(slider2.value)==100){
-      fleche2.src="css/FlecheDown.png";
-    }
-  } else if (Number(this.value)==100){
-    fleche1.src="css/FlecheDown.png";
-    fleche2.src="css/FlecheUp.png";
-  } else {
-    fleche1.src="css/fleche.png";
-    if(Number(slider2.value)!=0){
-      fleche2.src="css/fleche.png";
-    }
-  }*/
-    /*output1.innerHTML = this.value;
-    circle1.style.padding = (this.value*0.06 + 5)+"vw";
-    img1.style.bottom = (this.value*0.27 + 3.33)+"vh";*/
     calcVal();
     courbeSvg();
   //  anim();
@@ -137,9 +117,15 @@ slider1.oninput = function() {
 
 //cirle1 validation
 circle1.onclick= function() {
-  //this.background = "grey";
   slider1.disabled = true;
   slider2.disabled = false;
+  colors();
+};
+
+//cirle2 validation
+circle2.onclick= function() {
+  slider2.disabled = true;
+  slider1.disabled = false;
   colors();
 };
 //slider 2
@@ -149,29 +135,8 @@ slider2.oninput = function() {
   var oldValue = Number(output2.innerHTML);
   if (Number(slider1.value) + Number(this.value) > max) {
     var value = slider2.value;
-    /*slider1.value = value - (this.value - oldValue);
-    output1.innerHTML = slider1.value;
-    circle1.style.padding = (slider1.value*0.06 + 5)+"vw";
-    img1.style.bottom = (slider1.value*0.27 + 3.33)+"vh";*/
     slider2.value = value - (this.value - oldValue);
   }
-  /*if (Number(this.value)== 0){
-    fleche2.src="css/FlecheUp.png";
-    if(Number(slider1.value)==100){
-      fleche1.src="css/FlecheDown.png";
-    }
-  } else if (Number(this.value)==100) {
-    fleche2.src="css/FlecheDown.png";
-    fleche1.src="css/FlecheUp.png";
-  } else {
-    fleche2.src="css/fleche.png";
-    if(Number(slider1.value)!=0){
-      fleche1.src="css/fleche.png";
-    }
-  }*/
-    /*output2.innerHTML = this.value;
-    circle2.style.padding = (this.value*0.06 + 5)+"vw";
-    img2.style.bottom = (this.value*0.27 + 3.33)+"vh";*/
     calcVal();
     courbeSvg();
     //anim();
@@ -320,13 +285,17 @@ function anim(){
 function colors(){
   if(slider1.disabled){
     circle1.style.background = "linear-gradient(rgb(192,192,192),rgb(159,219,220))";
+    circle1.style.boxShadow = "2px 2px 5px 0px rgba(0,0,0,0.2)";
   }else{
     circle1.style.background = "linear-gradient(rgb(252,"+(225-Number(slider1.value)*0.75)+",31),rgb(252,"+(150-Number(slider1.value)*1.25)+",31))";
+    circle1.style.boxShadow = "0 0 50px #fff,10px 0 80px #0ff";
   }
   if(slider2.disabled){
     circle2.style.background = "linear-gradient(rgb(192,192,192),rgb(159,219,220))";
+    circle2.style.boxShadow = "2px 2px 5px 0px rgba(0,0,0,0.2)";
   }else{
     circle2.style.background = "linear-gradient(rgb(252,"+(225-Number(slider2.value)*0.75)+",31),rgb(252,"+(150-Number(slider2.value)*1.25)+",31))";
+    circle2.style.boxShadow = "0 0 50px #fff,10px 0 80px #0ff";
   }
   //circle3.style.background = "linear-gradient(rgb(252,"+(225-Number(slider3.value)*0.75)+",31),rgb(252,"+(150-Number(slider3.value)*1.25)+",31))";
   circle3.style.background = "linear-gradient(rgb(192,192,192),rgb(159,219,220))";

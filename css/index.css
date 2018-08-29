@@ -146,6 +146,9 @@ p{
   padding: 20px;
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
   /*background-color: orange;*/
+  /*box-shadow:
+        0 0 50px #fff,            /* outer white */
+        /*10px 0 80px #0ff; /* outer right cyan */
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -353,6 +356,7 @@ input[type=range]
   position: absolute;
   width: 100%;
   top : 40vh;
+  text-align: center;
 }
 
 .textBtn{

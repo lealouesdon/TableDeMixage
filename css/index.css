@@ -325,9 +325,9 @@ input[type=range]
     z-index:1000;
 }
 
-.btn:active {
+/*.btn:active {
   transform: rotate(180deg);
-}
+}*/
 
 
 

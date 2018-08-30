@@ -315,7 +315,8 @@ input[type=range]
 
 .overlay{
     opacity:1;
-    background-color:#F9F9F9;
+    /*background-color:#F9F9F9;*/
+    background: linear-gradient(#22b573,#0071bc);
     position:fixed;
     width:100vw;
     height:100vh;
@@ -324,12 +325,19 @@ input[type=range]
     z-index:1000;
 }
 
+.btn:active {
+  transform: rotate(180deg);
+}
+
+
+
 .btn{
-  display: inline-block;
+  position: absolute;
   border-radius: 50%;
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
   background: linear-gradient(#fcee21,#f7931e);
-  margin-left: 5vw;
+  transition: width 2s, height 2s, transform 1s;
+  /*margin-left: 5vw;
   padding-top:  10vw;
   padding-bottom: 10vw;
   padding-left: 1.5vw;
@@ -337,20 +345,50 @@ input[type=range]
   width: 20px;
     height: 20px;
 
-    margin-right: auto;
+    margin-right: auto;*/
     color: white;
     font-size: 15px;
 }
 
 #btn1{
-  padding-left: 4vw;
-  padding-right: 16vw;
+  height: 7vh;
+  width: 7vh;
+  padding-top: 8vh;
+  padding-bottom: 6vh;
+  padding-right: 12.5vh;
+  padding-left: 1.5vh;
+  right: 13%;
+  top : 5%;
+  font-size: 4vh;
+  background: linear-gradient(#fbb03b,#f15a24);
 }
 
 #btn2{
-  padding-left: 3vw;
-  padding-right: 17vw;
+  height: 8vh;
+  width: 8vh;
+  padding-top: 9.5vh;
+  padding-bottom: 6.5vh;
+  padding-right: 14vh;
+  padding-left: 2vh;
+  font-size: 3.8vh;
+  left : 10%;
+  top : 25%;
 }
+#btn3{
+  height: 10vh;
+  width: 10vh;
+  padding-top: 12vh;
+  padding-bottom: 8vh;
+  padding-right: 18vh;
+  padding-left: 2vh;
+  font-size: 4.3vh;
+  top : 53%;
+  right : 18%;
+  background: linear-gradient(#fbb03b,#f15a24);
+
+}
+
+
 
 .box{
   position: absolute;
@@ -360,7 +398,6 @@ input[type=range]
 }
 
 .textBtn{
-
   overflow: hidden;
     white-space: nowrap;
     text-align: center;

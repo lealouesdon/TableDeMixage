@@ -334,6 +334,11 @@ function setMode(m){
   //box.parentNode.removeChild(box);
 }
 
+
+
+
+
+
 document.addEventListener("backbutton", function() {
 
   var box = document.getElementById("Bbox");

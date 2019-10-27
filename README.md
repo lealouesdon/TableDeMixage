@@ -1,3 +1,3 @@
 # TableDeMixage
 
-Projet pour My Curiosity Exerience
+Projet pour My Curiosity Experience
